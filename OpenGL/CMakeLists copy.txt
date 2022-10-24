@@ -1,0 +1,42 @@
+cmake_minimum_required (VERSION 3.0)
+cmake_policy(VERSION 3.0)
+
+project(LearningOpenGL)
+
+set(CMAKE_CXX_STANDARD 17) # this does nothing for MSVC, use target_compile_options below
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS ON)
+
+IF(NOT CMAKE_BUILD_TYPE)
+  SET(CMAKE_BUILD_TYPE Debug CACHE STRING "Choose the type of build (Debug or Release)" FORCE)
+ENDIF(NOT CMAKE_BUILD_TYPE)
+
+# set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_SOURCE_DIR}/../cmake/modules/)
+
+if(WIN32)
+	set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
+endif(WIN32)
+
+link_directories(${CMAKE_SOURCE_DIR}/../libs)
+
+if(WIN32)
+  set(LIBS glfw3 opengl32)
+  add_definitions(-D_CRT_SECURE_NO_WARNINGS)
+endif(WIN32)
+
+
+set(SOURCE
+    main.cpp
+)
+
+add_library(STB_IMAGE "stb_image.cpp")
+set(LIBS ${LIBS} STB_IMAGE)
+
+add_library(GLAD "glad.c")
+set(LIBS ${LIBS} GLAD)
+
+set(NAME LearningOpenGL)
+add_executable(${NAME} ${SOURCE})
+target_link_libraries(${NAME} ${LIBS})
+
+include_directories(${CMAKE_SOURCE_DIR}/../includes)
