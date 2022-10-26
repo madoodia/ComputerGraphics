@@ -31,4 +31,4 @@ if not exist "%ROOT%/%FOLDER%/bin/glew32.dll" (
 	xcopy /y "%ROOT%\dlls\glew32.dll" "%ROOT%\%FOLDER%\bin\"
 )
 
-CALL %ROOT%/%FOLDER%/bin/%PROJECT_NAME%.exe
+@REM CALL %ROOT%/%FOLDER%/bin/%PROJECT_NAME%.exe
