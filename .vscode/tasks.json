@@ -16,7 +16,8 @@
 			"args": [
 				"${workspaceFolder}",
 				"${relativeFileDirname}",
-				"${fileBasenameNoExtension}"
+				"${fileBasenameNoExtension}",
+				"${relativeFileDirname}"
 			],
 			"problemMatcher": [],
 			"group": "build"

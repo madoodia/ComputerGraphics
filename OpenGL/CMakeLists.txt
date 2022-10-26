@@ -5,7 +5,7 @@
 cmake_minimum_required (VERSION 3.17)
 cmake_policy(VERSION 3.17)
 
-project(LearningOpenGL)
+project($ENV{PROJECT_NAME})
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -16,7 +16,6 @@ if(WIN32)
 endif(WIN32)
 
 include_directories(
-	../core2
 	../includes
 )
 
@@ -25,7 +24,7 @@ link_directories(
 )
 
 if(WIN32)
-  set(LIBS glfw3 glew32 API opengl32)
+  set(LIBS glfw3 glew32 opengl32)
   add_definitions(-D_CRT_SECURE_NO_WARNINGS)
 endif(WIN32)
 
@@ -34,11 +33,6 @@ set(SOURCES
     main.cpp
 )
 
-# if you want to build static library of core2/api2.cpp
-add_library(API2 "../core2/api2.cpp")
-set(LIBS ${LIBS} API2)
-
-set(NAME LearningOpenGL)
-add_executable(${NAME} ${SOURCES})
-target_link_libraries(${NAME} ${LIBS})
+add_executable($ENV{PROJECT_NAME} ${SOURCES})
+target_link_libraries($ENV{PROJECT_NAME} ${LIBS})
 

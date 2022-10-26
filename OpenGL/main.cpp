@@ -12,8 +12,6 @@
 #include <GLFW/glfw3.h>
 
 // Application Libraries
-#include "api2.h"
-#include "core/api.h"
 
 void framebufferSizeCallback(GLFWwindow* window, int width, int height);
 void processInput(GLFWwindow* window);
@@ -48,9 +46,6 @@ int main()
 		std::cout << "Failed to initialize GLEW" << std::endl;
 		return -1;
 	}
-
-	std::cout << "Result: " << Madoodia::add(10, 20) << std::endl;
-	std::cout << "Result: " << Madoodia2::add2(100, 200) << std::endl;
 
 	// render loop
 	while (!glfwWindowShouldClose(window))

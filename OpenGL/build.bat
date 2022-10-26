@@ -8,6 +8,8 @@
 SET ROOT=%1
 SET FOLDER=%2
 SET FILE=%3
+SET BASENAME=%4
+SET PROJECT_NAME=%BASENAME%
 
 call "%VCVARS_LOCATION%/vcvarsall.bat" x64
 
@@ -29,4 +31,4 @@ if not exist "%ROOT%/%FOLDER%/bin/glew32.dll" (
 	xcopy /y "%ROOT%\dlls\glew32.dll" "%ROOT%\%FOLDER%\bin\"
 )
 
-CALL %ROOT%/%FOLDER%/bin/LearningOpenGL.exe
+CALL %ROOT%/%FOLDER%/bin/%PROJECT_NAME%.exe
