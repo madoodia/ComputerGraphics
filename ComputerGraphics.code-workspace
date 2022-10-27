@@ -1,23 +1,23 @@
 {
-	"folders": [
-		// {
-		// 	"path": "D:/madoodia/sdks/OpenGL"
-		// },
-		{
-			"path": "."
-		}
-	],
-	"settings": {
-		"editor.detectIndentation": false,
-		"editor.insertSpaces": true,
-		"editor.tabSize": 2,
-		"editor.useTabStops": false,
-		"C_Cpp.clang_format_path": "",
-		"C_Cpp.clang_format_style": "file"
-	},
-	"extensions": {
-		"recommendations": [
-			"ms-vscode.cpptools"
-		]
-	}
+  "folders": [
+    // {
+    // 	"path": "D:/madoodia/sdks/OpenGL"
+    // },
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "editor.detectIndentation": false,
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.useTabStops": false,
+    "C_Cpp.clang_format_path": "",
+    "C_Cpp.clang_format_style": "file"
+  },
+  "extensions": {
+    "recommendations": [
+      "ms-vscode.cpptools"
+    ]
+  }
 }
