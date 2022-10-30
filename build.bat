@@ -49,4 +49,4 @@ if not exist "%ROOT%/%CMAKEFOLDER%/bin/glew32.dll" (
 CD %ROOT%/%CMAKEFOLDER%/bin
 del *.ilk && del *.pdb
 
-@REM CALL %ROOT%/%FOLDER%/bin/%PROJECT_NAME%.exe
+CALL %ROOT%/%CMAKEFOLDER%/bin/%PROJECT_NAME%.exe
