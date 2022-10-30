@@ -28,11 +28,9 @@ if(WIN32)
   add_definitions(-D_CRT_SECURE_NO_WARNINGS)
 endif(WIN32)
 
-
 set(SOURCES
-    main.cpp
+  "$ENV{ROOT}/$ENV{BASENAME}/$ENV{FILENAME}.cpp"
 )
 
 add_executable($ENV{PROJECT_NAME} ${SOURCES})
 target_link_libraries($ENV{PROJECT_NAME} ${LIBS})
-
