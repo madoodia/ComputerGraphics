@@ -1,6 +1,6 @@
 /*
 # -------------------- #
-# (C)2022 madoodia.com #
+# (C)2023 madoodia.com #
 # -------------------- #
 */
 
@@ -8,7 +8,6 @@
 #include <vector>
 #include <string>
 
-#include <Windows.h>
 
 int main()
 {
