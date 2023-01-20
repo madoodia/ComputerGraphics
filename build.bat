@@ -12,6 +12,15 @@ SET BASENAME=%4
 SET FILEDIRNAME=%5
 SET PROJECT_NAME=%FILENAME%
 
+@REM echo ---------------------------------
+@REM echo %ROOT%
+@REM echo %FOLDER%
+@REM echo %FILENAME%
+@REM echo %BASENAME%
+@REM echo %FILEDIRNAME%
+@REM echo %PROJECT_NAME%
+@REM echo ---------------------------------
+
 @REM replacing \ character with / character in all inputs
 set ROOT=%ROOT:\=/%
 set FOLDER=%FOLDER:\=/%

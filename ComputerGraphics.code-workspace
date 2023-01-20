@@ -13,7 +13,20 @@
     "editor.tabSize": 2,
     "editor.useTabStops": false,
     "C_Cpp.clang_format_path": "",
-    "C_Cpp.clang_format_style": "file"
+    "C_Cpp.clang_format_style": "file",
+    "files.associations": {
+      "algorithm": "cpp"
+    },
+    "files.exclude": {
+      "**/.git": true,
+      "**/.svn": true,
+      "**/.hg": true,
+      "**/CVS": true,
+      "**/.DS_Store": true,
+      "**/Thumbs.db": true,
+      // "**/build": true,
+      // "**/bin": true
+    }
   },
   "extensions": {
     "recommendations": [
