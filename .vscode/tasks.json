@@ -23,5 +23,17 @@
       "problemMatcher": [],
       "group": "build"
     },
+    {
+      "type": "shell",
+      "label": "run",
+      "windows": {
+        "command": "${fileDirname}/bin/${fileBasenameNoExtension}.exe"
+      },
+      "linux": {
+        "command": "${fileDirname}/bin/${fileBasenameNoExtension}"
+      },
+      "problemMatcher": []
+    },
   ]
 }
+

@@ -12,15 +12,6 @@ SET BASENAME=%4
 SET FILEDIRNAME=%5
 SET PROJECT_NAME=%FILENAME%
 
-@REM echo ---------------------------------
-@REM echo %ROOT%
-@REM echo %FOLDER%
-@REM echo %FILENAME%
-@REM echo %BASENAME%
-@REM echo %FILEDIRNAME%
-@REM echo %PROJECT_NAME%
-@REM echo ---------------------------------
-
 @REM replacing \ character with / character in all inputs
 set ROOT=%ROOT:\=/%
 set FOLDER=%FOLDER:\=/%
@@ -51,11 +42,11 @@ cmake -G "NMake Makefiles" "%ROOT%/%CMAKEFOLDER%"
 cmake --build . --config Debug
 
 if not exist "%ROOT%/%CMAKEFOLDER%/bin/glew32.dll" (
-	xcopy /y "%ROOT%\dlls\glew32.dll" "%ROOT%/%CMAKEFOLDER%\bin\"
+	xcopy /y "%ROOT%\dlls\glew32.dll" "%ROOT%/%BASENAME%\bin\"
 )
 
-@REM delete extra files in bin folder
-CD %ROOT%/%CMAKEFOLDER%/bin
-del *.ilk && del *.pdb
+@REM delete extra files in bin folder for release mode
+@REM CD %ROOT%/%CMAKEFOLDER%/bin
+@REM del *.ilk && del *.pdb
 
-CALL %ROOT%/%CMAKEFOLDER%/bin/%PROJECT_NAME%.exe
+@REM CALL %ROOT%/%CMAKEFOLDER%/bin/%PROJECT_NAME%.exe

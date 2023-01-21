@@ -5,7 +5,7 @@
       "type": "cppvsdbg",
       "name": "Debug",
       "request": "launch",
-      "program": "${fileDirname}/bin/${relativeFileDirname}.exe",
+      "program": "${fileDirname}/bin/${fileBasenameNoExtension}.exe",
       "args": [],
       "stopAtEntry": false,
       "cwd": "${workspaceFolder}",
