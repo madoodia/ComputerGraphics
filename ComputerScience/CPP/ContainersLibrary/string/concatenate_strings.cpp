@@ -53,6 +53,8 @@ int main()
     std::string str2 = " World";
     std::stringstream ss;
     ss << str1 << str2;
-    std::string str3 = ss.str(); // str3 is "Hello World"}
+    // std::string str3 = ss.str(); // str3 is "Hello World"
+    std::string str3; // str3 is "Hello World"
+    ss >> str3;
   }
 }
