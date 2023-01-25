@@ -9,4 +9,5 @@ IndentCaseLabels: false
 ColumnLimit: 0
 AccessModifierOffset: -2
 SortIncludes: false
+SpaceAfterControlStatement: false
 EmptyLineBeforeAccessModifier: Always
