@@ -11,10 +11,20 @@
 
 int main()
 {
-  std::vector<std::string> myVector = {
-      "alpha",
-      "beta",
-      "gamma"};
+  std::vector<std::string> myVector = {};
+
+  myVector.push_back("alpha");
+  myVector.push_back("beta");
+  myVector.push_back("gamma");
+  myVector.push_back("delta");
+  myVector.push_back("epsilon");
+  myVector.push_back("zeta");
+  myVector.push_back("eta");
+  myVector.push_back("theta");
+  myVector.push_back("iota");
+  myVector.push_back("kappa");
+  std::cout << myVector.size() << std::endl;
+  std::cout << myVector.capacity() << std::endl;
 
   std::cout << myVector.at(0).at(0) << std::endl; // myVector[0][0]
   // or
@@ -25,9 +35,6 @@ int main()
   // or
   myVector[0][0] = 'A';
 
-  myVector.push_back("delta");
-  myVector.push_back("epsilon");
-
   std::cout << myVector[2][3] << std::endl;
 
   std::cout << myVector[0] << std::endl; // myVector[0]
@@ -35,6 +42,8 @@ int main()
   std::cout << myVector[2] << std::endl; // myVector[2]
   std::cout << myVector[3] << std::endl; // myVector[3]
   std::cout << myVector[4] << std::endl; // myVector[4]
+  std::cout << myVector[5] << std::endl; // myVector[5]
+  // std::cout << myVector[6] << std::endl; // myVector[6]
 
   // create a vector of strings of pilot alphabet
   std::vector<std::string> pilotAlphabet = {
@@ -64,6 +73,8 @@ int main()
       "x-ray",
       "yankee",
       "zulu"};
+  std::cout << pilotAlphabet.size() << std::endl;
+  std::cout << pilotAlphabet.capacity() << std::endl;
 
   // create a vector of strings of greek numbers name
   std::vector<std::string> greekNumbers = {
@@ -91,6 +102,8 @@ int main()
       "chi",
       "psi",
       "omega"};
+  std::cout << greekNumbers.size() << std::endl;
+  std::cout << greekNumbers.capacity() << std::endl;
 
   // create a vector of strings of 10 randome names
   std::vector<std::string> randomNames = {

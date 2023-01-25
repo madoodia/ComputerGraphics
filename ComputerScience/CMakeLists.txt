@@ -24,6 +24,7 @@ link_directories(
 )
 
 if(WIN32)
+  # set(LIBS Kernel32.lib)
   set(LIBS)
   add_definitions(-D_CRT_SECURE_NO_WARNINGS)
 endif(WIN32)
