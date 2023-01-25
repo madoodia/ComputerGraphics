@@ -27,12 +27,19 @@
       "type": "shell",
       "label": "run",
       "windows": {
-        "command": "${fileDirname}/bin/${fileBasenameNoExtension}.exe"
+        "command": "${workspaceFolder}/run.bat"
       },
       "linux": {
-        "command": "${fileDirname}/bin/${fileBasenameNoExtension}"
+        "command": "${workspaceFolder}/run.sh"
       },
-      "problemMatcher": []
+      "problemMatcher": [],
+      "args": [
+        "${workspaceFolder}",
+        "${relativeFileDirname}",
+        "${fileBasenameNoExtension}",
+        "${relativeFileDirname}",
+        "${fileDirname}"
+      ]
     },
   ]
 }
