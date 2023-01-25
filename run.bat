@@ -15,4 +15,8 @@ SET PROJECT_NAME=%FILENAME%
 
 CALL %ROOT%/build.bat %ROOT% %FOLDER% %FILENAME% %BASENAME% %FILEDIRNAME%
 
+echo --------------------------
+echo.
 CALL "%FILEDIRNAME%\bin\%FILENAME%.exe"
+echo.
+echo --------------------------
