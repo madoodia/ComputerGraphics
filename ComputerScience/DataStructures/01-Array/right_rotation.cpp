@@ -6,7 +6,7 @@
 
 #include <iostream>
 
-void leftRotate1(int arr[], int d, int size)
+void rightRotate1(int arr[], int d, int size)
 {
   // rotate array
   if (d <= 0)
@@ -14,32 +14,32 @@ void leftRotate1(int arr[], int d, int size)
 
   int* temp = new int[d];
 
+  for (int i = (size - d); i < size; i++)
+  {
+    temp[i - (size - d)] = arr[i];
+  }
+  for (int i = (size - d - 1); i >= 0; i--)
+  {
+    arr[i + d] = arr[i];
+  }
   for (int i = 0; i < d; i++)
   {
-    temp[i] = arr[i];
-  }
-  for (int i = 0; i < size - 1; i++)
-  {
-    arr[i] = arr[i + d];
-  }
-  for (int i = 0; i < d; i++)
-  {
-    arr[size - d + i] = temp[i];
+    arr[i] = temp[i];
   }
 
   delete[] temp;
 }
-void leftRotate2(int arr[], int d, int n)
+void rightRotate2(int arr[], int d, int n)
 {
   int p = 1;
   while (p <= d)
   {
-    int last = arr[0];
-    for (int i = 0; i < n - 1; i++)
+    int last = arr[n - 1];
+    for (int i = n - 1; i > 0; i--)
     {
-      arr[i] = arr[i + 1];
+      arr[i] = arr[i - 1];
     }
-    arr[n - 1] = last;
+    arr[0] = last;
     p++;
   }
 }
@@ -58,8 +58,8 @@ int main()
   }
   std::cout << std::endl;
 
-  leftRotate1(arr, d, size);
-  // leftRotate2(arr, d, size);
+  // rightRotate1(arr, d, size);
+  rightRotate2(arr, d, size);
 
   // print rotated array
   for (int i = 0; i < size; i++)

@@ -57,5 +57,7 @@ int main()
 
   std::cout << "Largest 3 elements are: " << largest[0] << " " << largest[1] << " " << largest[2] << std::endl;
 
+  delete[] largest;
+
   return 0;
 }
