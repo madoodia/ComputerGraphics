@@ -96,7 +96,8 @@
       "stop_token": "cpp",
       "thread": "cpp",
       "ranges": "cpp",
-      "span": "cpp"
+      "span": "cpp",
+      "filesystem": "cpp"
     },
     "files.exclude": {
       "**/.git": true,

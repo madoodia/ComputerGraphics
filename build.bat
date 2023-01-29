@@ -31,6 +31,7 @@ call %ROOT%/envVars.bat
 @REM remove build folder before building the project
 if exist "%FILEDIRNAME%/build" (
     rmdir /s /q "%FILEDIRNAME%/build"
+    rmdir /s /q "%FILEDIRNAME%/bin"
 )
 
 CD %FILEDIRNAME%
