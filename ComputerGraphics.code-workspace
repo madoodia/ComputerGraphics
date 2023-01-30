@@ -97,7 +97,10 @@
       "thread": "cpp",
       "ranges": "cpp",
       "span": "cpp",
-      "filesystem": "cpp"
+      "filesystem": "cpp",
+      "deque": "cpp",
+      "queue": "cpp",
+      "stack": "cpp"
     },
     "files.exclude": {
       "**/.git": true,
