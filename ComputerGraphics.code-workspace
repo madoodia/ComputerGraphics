@@ -101,7 +101,8 @@
       "deque": "cpp",
       "queue": "cpp",
       "stack": "cpp",
-      "set": "cpp"
+      "set": "cpp",
+      "variant": "cpp"
     },
     "files.exclude": {
       "**/.git": true,

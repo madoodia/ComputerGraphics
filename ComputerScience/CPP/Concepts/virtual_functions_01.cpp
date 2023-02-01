@@ -22,6 +22,11 @@ public:
   {
     std::cout << "Shape::~Shape()" << std::endl;
   }
+
+  virtual void test(int a)
+  {
+    std::cout << "Shape::test()" << std::endl;
+  }
 };
 
 class Circle : public Shape
@@ -59,6 +64,11 @@ public:
   {
     std::cout << "Rectangle::~Rectangle()" << std::endl;
   }
+
+  virtual void test(int a, int b)
+  {
+    std::cout << "Rectangle::test()" << std::endl;
+  }
 };
 
 class Square : public Rectangle
@@ -78,6 +88,11 @@ public:
   // {
   //   std::cout << "Square::draw()" << std::endl;
   // }
+
+  virtual void test(int a, int b)
+  {
+    std::cout << "Square::test()" << std::endl;
+  }
 };
 
 int main()
