@@ -38,6 +38,7 @@ Level::Level()
 
 Level::~Level()
 {
+  delete OurVector; // equivalent to Destroy an object from a class in unreal engine blueprints
 }
 
 // ----------------------------
