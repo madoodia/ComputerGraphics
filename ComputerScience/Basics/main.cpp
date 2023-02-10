@@ -6,6 +6,19 @@
 
 #include <iostream>
 
+struct Color
+{
+  unsigned int red : 8;
+  unsigned int green : 8;
+  unsigned int blue : 8;
+};
+struct Color2
+{
+  unsigned int red;
+  unsigned int green;
+  unsigned int blue;
+};
+
 int main()
 {
   int value = 1234;
@@ -66,6 +79,17 @@ int main()
   a = a ^ b;
   b = a ^ b;
   a = a ^ b;
+
+  // Create a color with red=255, green=128, blue=0
+  Color color = {255, 128, 0};   // sizeof(color) = 4
+  Color2 color2 = {255, 128, 0}; // sizeof(color2) = 12
+
+  // define an integer with bit fields technique
+  struct
+  {
+    unsigned char a : 8;
+    unsigned char b : 8;
+  } bitField; // sizeof(bitField) = 2
 
   return 0;
 }
