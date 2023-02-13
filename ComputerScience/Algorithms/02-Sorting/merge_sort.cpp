@@ -38,12 +38,46 @@ void merge_sort(int* arr, int start, int end)
     arr[i] = temp[i - start];
 }
 
+// implement in-place merge sort
+void merge_sort2(int* arr, int start, int end)
+{
+  if (start >= end)
+    return;
+
+  int mid = (start + end) / 2;
+  merge_sort2(arr, start, mid);
+  merge_sort2(arr, mid + 1, end);
+
+  int i = start;
+  int j = mid + 1;
+
+  while (i <= mid && j <= end)
+  {
+    if (arr[i] < arr[j])
+      i++;
+    else
+    {
+      int temp = arr[j];
+      int k = j - 1;
+      while (k >= i)
+      {
+        arr[k + 1] = arr[k];
+        k--;
+      }
+      arr[i] = temp;
+      i++;
+      j++;
+      mid++;
+    }
+  }
+}
+
 int main()
 {
-  int arr[] = { 5, 1, 3, 2, 4 };
+  int arr[] = {5, 1, 3, 2, 4, 8, 10, 9, 7, 6};
   int n = sizeof(arr) / sizeof(arr[0]);
 
-  merge_sort(arr, 0, n - 1);
+  merge_sort2(arr, 0, n - 1);
 
   for (int i = 0; i < n; i++)
     std::cout << arr[i] << " ";
