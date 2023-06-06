@@ -9,7 +9,7 @@ SET ROOT=%1
 SET FOLDER=%2
 SET FILENAME=%3
 SET BASENAME=%4
-SET FILEDIRNAME=%5
+SET FOLEDIRNAME=%5
 SET PROJECT_NAME=%FILENAME%
 
 @REM replacing \ character with / character in all inputs
@@ -17,7 +17,7 @@ set ROOT=%ROOT:\=/%
 set FOLDER=%FOLDER:\=/%
 set FILENAME=%FILENAME:\=/%
 set BASENAME=%BASENAME:\=/%
-set FILEDIRNAME=%FILEDIRNAME:\=/%
+set FOLEDIRNAME=%FOLEDIRNAME:\=/%
 
 @REM tokenize string to get the parent folder containing cmakefile
 set nth=1
@@ -29,12 +29,12 @@ call "%VCVARS_LOCATION%/vcvarsall.bat" x64
 call %ROOT%/envVars.bat
 
 @REM remove build folder before building the project
-if exist "%FILEDIRNAME%/build" (
-    rmdir /s /q "%FILEDIRNAME%/build"
-    rmdir /s /q "%FILEDIRNAME%/bin"
+if exist "%FOLEDIRNAME%/build" (
+    rmdir /s /q "%FOLEDIRNAME%/build"
+    rmdir /s /q "%FOLEDIRNAME%/bin"
 )
 
-CD %FILEDIRNAME%
+CD %FOLEDIRNAME%
 MKDIR build
 CD build
 
