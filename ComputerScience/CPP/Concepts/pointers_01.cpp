@@ -19,5 +19,9 @@ int main()
 
     std::cout << "++*p: " << ++*p << std::endl; // ++*p: 31
     std::cout << "&x: " << p << std::endl;      // &x: 0x505298
+
+    std::cout << "(*p)++: " << (*p)++ << std::endl; // (*p)++: 31
+    std::cout << "&x: " << p << std::endl;          // &x: 0x505298
+
     return 0;
 }
