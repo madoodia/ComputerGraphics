@@ -37,7 +37,7 @@ int main()
     // glfwWindowHint(GLFW_RESIZABLE, GL_FALSE); // Not resizable window
 
     // glfw window creatiion
-    GLFWwindow* window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "Learning OpenGL", nullptr, nullptr);
+    GLFWwindow* window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "Bravo", nullptr, nullptr);
     if (window == nullptr)
     {
         std::cout << "Failed to create GLFW window" << std::endl;
